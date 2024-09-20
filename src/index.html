@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+    <section class="grid grid-cols-3 gap-5 mt-10 mx-20">
+        <!-- * for sit section -->
+        <div class="bg-sky-200 col-span-2 px-5 py-10">
+            <div class="flex justify-between">
+                <h1 class="text-2xl font-bold">Select Your Seat</h1>
+                <button class="px-5 py-3 bg-green-500 text-white">Availab 
+                    <span id="already-booked">40</span></button>
+            </div>
+            <div class="flex justify-between">
+                <p class="text-xl font-bold mt-4">Available</p>
+                <p class="text-xl font-bold mt-4">Selected</p>
+            </div>
+            <!-- ! sit section -->
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">A</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button onclick="handelSitClick(this)"
+                    class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">A1</button>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">A2</button>
+                    <span class="col-span-2"></span>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">A3</button>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">A4</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">B</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">B1</button>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">B2</button>
+                    <span class="col-span-2"></span>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">B3</button>
+                    <button onclick="handelSitClick(this)"
+                     class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">B4</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">C</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">C1</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">C2</button>
+                    <span class="col-span-2"></span>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">C3</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">C4</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">F</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">D1</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">D2</button>
+                    <span class="col-span-2"></span>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">D3</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">D4</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">E</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">E1</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">E2</button>
+                    <span class="col-span-2"></span>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">E3</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">E4</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 items-center gap-y-5 mt-5 ml-20">
+                <span class="col-span-1">F</span>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">F1</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">F2</button>
+                    <span class="col-span-2"></span>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">F3</button>
+                    <button class="col-span-1 bg-white w-14 h-10 rounded-xl hover:bg-black hover:text-white">F4</button>
+                </div>
+            </div>
+            <!-- ! close sit section -->
+        </div>
+        <!-- ! form section -->
+        <div class="bg-sky-200 pl-5 px-10">
+            <h1 class="text-2xl font-bold mt-5">Select Your Seat</h1>
+            <div>
+                <div class="mt-5 flex justify-between">
+                    <p class="text-xl font-semibold">
+                        Seat
+                        <span id="total-booked" class="bg-green-400 text-white">0</span>
+                    </p>
+                    <p class="text-xl font-semibold">Class</p>
+                    <p class="text-xl font-semibold">Price</p>
+                </div>
+                <div class="border-b-4 border-dotted border-gray-500 mt-3"></div>
+            </div>
+            <!-- price added -->
+
+            <!-- ! defalult text -->
+
+            <div id="no-sit-select">
+                <h1 id="no-ticket-text" class="text-red-400 text-center mt-4 text-3xl font-bold">No ticket Select</h1>
+            </div>
+
+            <!-- ! total Price -->
+             <div class="text-xl font-semibold flex justify-between">
+                <p>Total Price</p>
+                <p>BDT:
+                    <span id="total-price">****</span>
+                </p>
+             </div>
+             <div class="text-xl font-semibold flex justify-between">
+                <p>Gradn Price</p>
+                <p>BDT:
+                    <span id="grand-price">****</span>
+                </p>
+             </div>
+
+             <!-- ! coupon card -->
+              <div class="w-full mt-4">
+                <input id="coupon-feild" type="text" placeholder="Have any coupon?" class="w-[80%] h-10 pl-4" disabled>
+                <button id="coupon-btn" class="bg-green-500 w-[15%] h-10" disabled>Apply</button>
+              </div>
+
+              <!-- ! submit feild -->
+              <label class="form-control w-full mt-5">
+                <div class="label">
+                  <span class="label-text">Phone Number</span>
+                </div>
+                <input id="phone-number" type="text" placeholder="Type here" class="input input-bordered w-full" />
+                <button id="form-btn" class="bg-green-500 h-10 mt-5" disabled>
+                    next
+                </button>
+              </label>
+        </div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
