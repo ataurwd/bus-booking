@@ -86,14 +86,21 @@ document.getElementById('coupon-btn').addEventListener('click', () => {
 
 //! disable numebr feild
 
-const phoneNumberfeild = document.getElementById('phone-number').value;
+const phoneNumberfeild = document.getElementById('phone-number');
 const formBtn = document.getElementById('form-btn');
+const closeBtn = document.getElementById('close');
 
-formBtn.addEventListener('click', (e) => {
-    if (phoneNumberfeild.length >= 11) {
-        formBtn.removeAttribute('disabled');
+// Listen for input on the phone number field
+phoneNumberfeild.addEventListener('input', function (e) {
+    const inputValue = e.target.value;
+    if (inputValue.length >= 11) {
+        formBtn.removeAttribute('disabled'); // Enable button
     } else {
-        formBtn.setAttribute('disabled', true);
+        formBtn.setAttribute('disabled', true); // Disable button
     }
 });
 
+// Reload the window when close button is clicked
+closeBtn.addEventListener('click', function () {
+    window.location.reload();
+});

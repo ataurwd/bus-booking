@@ -108,7 +108,6 @@
             <!-- price added -->
 
             <!-- ! defalult text -->
-
             <div id="no-sit-select">
                 <h1 id="no-ticket-text" class="text-red-400 text-center mt-4 text-3xl font-bold">No ticket Select</h1>
             </div>
@@ -136,13 +135,27 @@
               <!-- ! submit feild -->
               <label class="form-control w-full mt-5">
                 <div class="label">
-                  <span class="label-text">Phone Number</span>
+                    <span class="label-text">Phone Number</span>
                 </div>
                 <input id="phone-number" type="text" placeholder="Type here" class="input input-bordered w-full" />
-                <button id="form-btn" class="bg-green-500 h-10 mt-5" disabled>
-                    next
-                </button>
-              </label>
+                <button onclick="my_modal_2.showModal()" disabled id="form-btn" class="text-white btn bg-green-500 h-10 mt-5">
+                    Next
+                </button>                
+            </label>
+            
+              <!-- ! for popup -->
+               <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn">open modal</button> -->
+            <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                    <h3 class="text-lg font-bold">Hello!</h3>
+                    <p class="py-4">Press ESC key or click outside to close</p>
+                    <!-- Close button inside modal content -->
+                    <form method="dialog">
+                        <button id="close" class="btn">Close</button>
+                    </form>
+                </div>
+            </dialog>            
         </div>
     </section>
     <script src="./main.js"></script>
